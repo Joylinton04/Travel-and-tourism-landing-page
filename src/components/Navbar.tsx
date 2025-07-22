@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 
 const Navbar = () => {
   return (
-    <nav className="px-14 py-6 flex items-center justify-between">
+    <nav className="px-14 py-6 flex items-center justify-between max-w-[1440px] mx-auto">
       <div className="inline-flex items-center gap-4">
         <img src={assets.logo} />
         <h1 className="font-heading text-2xl text-white font-extrabold">
@@ -27,7 +27,7 @@ const Navbar = () => {
         <button className="text-base font-bold text-white px-4 py-2 rounded-full hover:text-black hover:bg-gray-200 transition-colors">
           Log in
         </button>
-        <button className="text-base font-bold bg-white text-black px-4 py-2 rounded-full  hover:bg-gray-200 transition-colors">
+        <button className="text-base font-medium bg-white text-black px-4 py-2 rounded-full  hover:bg-gray-200 transition-colors">
           Sign up
         </button>
       </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import { assets } from "./assets/assets";
 import Navbar from "./components/Navbar";
+import Hero_section from "./components/Hero_section";
+import Sponsors from "./components/Sponsors";
 
 type Props = {
   children: React.ReactNode;
@@ -9,8 +11,9 @@ type Props = {
 
 const LandingPage = () => {
   return (
-    <div className="h-full w-full relative font-body">
+    <div className="w-full relative font-body">
       <div
+        className="h-screen"
         style={{
           backgroundImage: `url(${assets.heroImg})`,
           backgroundSize: "cover",
@@ -21,8 +24,8 @@ const LandingPage = () => {
       >
         <Navbar />
 
-        <div className="pt-32">
-          <h1 className="font-heading font-bold text-[64px] text-center text-white/90">
+        <div className="pt-28 max-w-[1440px] mx-auto">
+          <h1 className="font-heading font-bold text-[64px] text-center text-white/90 leading-tight">
             Discover Your Next Amazing Journey Full of Excitement and Wonder
           </h1>
           <p className="text-white/80 font-medium text-center">
@@ -31,78 +34,23 @@ const LandingPage = () => {
           </p>
         </div>
 
-        <div className="px-14 py-16">
-          <div className="h-[276px] bg-white w-full rounded-2xl p-4">
-            <ul className="flex items-center gap-6 text-[#000000]/50 text-sm cursor-pointer relative">
-              <li className="px-4 py-2 bg-black text-white rounded-full">
-                Travel
-              </li>
-              {["Hotel", "Destination", "Packages"].map((item, index) => (
-                <li
-                  key={index}
-                  className="rounded-full transition-all duration-300 hover:px-4 hover:py-2 hover:rounded-full hover:bg-black hover:text-white"
-                >
-                  {item}
-                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 hover:w-full" />
-                </li>
-              ))}
-            </ul>
-            <div className="flex items-center justify-between">
-              <div className="flex flex-col mt-4 gap-4">
-                <h1 className="font-bold">Location</h1>
-                <div className="relative flex items-center w-[377px] h-[48px] bg-gray-100 rounded-full border-gray-300">
-                  <img src={assets.location} className="px-2" />
-                  <input
-                    type="text"
-                    placeholder="Search for your next destination"
-                    className="w-full h-full rounded-full px-4 py-2 outline-none transition-colors bg-transparent text-sm"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col mt-4 gap-4">
-                <h1 className="font-bold">Departure</h1>
-                <div className="relative flex items-center w-[377px] h-[48px] bg-gray-100 rounded-full border-gray-300">
-                  <img src={assets.location} className="px-2" />
-                  <input
-                    type="text"
-                    placeholder="Date range"
-                    className="w-full h-full rounded-full px-4 py-2 outline-none transition-colors bg-transparent text-sm"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col mt-4 gap-4">
-                <h1 className="font-bold">Guests</h1>
-                <div className="relative flex items-center w-[377px] h-[48px] bg-gray-100 rounded-full border-gray-300">
-                  <img src={assets.location} className="px-2" />
-                  <input
-                    type="text"
-                    placeholder="Select Guest"
-                    className="w-full h-full rounded-full px-4 py-2 outline-none transition-colors bg-transparent text-sm"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between mt-8">
-              <div className="flex items-center gap-4">
-                <h1 className="font-bold">Filters: </h1>
-                <ul className="flex items-center gap-4 text-sm">
-                  {
-                    ["Maldives, South Asia", "Palawan, Thailand", "Ball, Indonesia","Santorini, Greece"].map((filter, index) => (
-                      <li
-                        key={index}
-                        className="inline-block text-black rounded-full text-xs cursor-pointer transition-all duration-500 hover:bg-gray-300 border px-4 py-1"
-                      >
-                        {filter}
-                      </li>
-                    ))
-                  }
-                </ul>
-              </div>
-              <button className="px-4 py-2 bg-black text-white rounded-full text-sm">Search Now</button>
-            </div>
-          </div>
-        </div>
+        {/* Hero section */}
+        <Hero_section />
+      </div>
+      <h1 className="font-semibold text-2xl p-6 text-center">
+        Trusted by 500+ Companies
+      </h1>
+      <div className="px-14 flex justify-between items-center">
+        <Sponsors img={assets.segment} text="Segment"/>
+        <Sponsors img={assets.goodwell} text="Goodwell"/>
+        <Sponsors img={assets.goodwell} text="Goodwell"/>
+        <Sponsors img={assets.screentime} text="Screentime"/>
+        <Sponsors img={assets.mastermail} text="Mastermail"/>
+        <Sponsors img={assets.segment} text="Shutterframe"/>
+      </div>
+      <div>
+        <h1 className="w-[523px] font-heading mx-auto mt-20 text-4xl font-extrabold text-center">Top Travel Deals of the Month  Handpicked for you</h1>
+        <h1 className="w-[523px] mx-auto mt-6 font-medium text-center">Explore curated travel packages for every kind of traveler - whether you’re dreaming of a beach escape, a mountain adventure, or a vibrant city journey, there’s something special waiting for you</h1>
       </div>
     </div>
   );
