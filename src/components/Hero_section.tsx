@@ -23,7 +23,7 @@ const Hero_section = () => {
                     <div className="flex flex-col mt-4 gap-4">
                         <h1 className="font-bold">Location</h1>
                         <div className="relative flex items-center w-[377px] h-[48px] bg-gray-100 rounded-full border-gray-300">
-                            <img src={assets.location} className="px-2" />
+                            <img src={assets.location} className="px-4" />
                             <input
                                 type="text"
                                 placeholder="Search for your next destination"
@@ -34,7 +34,7 @@ const Hero_section = () => {
                     <div className="flex flex-col mt-4 gap-4">
                         <h1 className="font-bold">Departure</h1>
                         <div className="relative flex items-center w-[377px] h-[48px] bg-gray-100 rounded-full border-gray-300">
-                            <img src={assets.location} className="px-2" />
+                            <img src={assets.location} className="px-4" />
                             <input
                                 type="text"
                                 placeholder="Date range"
@@ -45,7 +45,7 @@ const Hero_section = () => {
                     <div className="flex flex-col mt-4 gap-4">
                         <h1 className="font-bold">Guests</h1>
                         <div className="relative flex items-center w-[377px] h-[48px] bg-gray-100 rounded-full border-gray-300">
-                            <img src={assets.location} className="px-2" />
+                            <img src={assets.guest} className="px-4" />
                             <input
                                 type="text"
                                 placeholder="Select Guest"
