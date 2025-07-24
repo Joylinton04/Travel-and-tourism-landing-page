@@ -11,6 +11,10 @@ import card_gallery2 from './card_gallery2.jpg'
 import card_gallery3 from './card_gallery3.jpg'
 import card_gallery4 from './card_gallery4.jpg'
 import card_gallery5 from './card_gallery5.jpg'
+import forward_arrow from './arrow-forward-simple.svg'
+import bamurru from './Bamurru Plains Airboat Sunset.jpg'
+import oda from './Resorts Photo.jpg'
+import jimbaran from './Four Seasons Bali Jimbaran.webp'
 
 
 
@@ -28,5 +32,9 @@ export const assets = {
     card_gallery2,
     card_gallery3,
     card_gallery4,
-    card_gallery5
+    card_gallery5,
+    forward_arrow,
+    oda,
+    bamurru,
+    jimbaran,
 }
