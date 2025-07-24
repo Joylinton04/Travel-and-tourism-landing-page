@@ -9,37 +9,74 @@ type Props = {
   pic: string;
 };
 
-
 const card_gallery = [
   {
     img: assets.card_gallery2,
     title: "Maldives, South Asia",
     amount: "$650 - $950",
-    description: "A comprehensive 10-day travel guide designed to the gems and attractions of the Maldives.",
+    description:
+      "A comprehensive 10-day travel guide designed to the gems and attractions of the Maldives.",
     className: "col-start-2",
   },
   {
     img: assets.card_gallery3,
     title: "Pai, Thailand",
     amount: "$650 - $950",
-    description: "A comprehensive 10-day travel guide designed to the gems and attractions of Pai.",
+    description:
+      "A comprehensive 10-day travel guide designed to the gems and attractions of Pai.",
     className: "col-start-3",
   },
   {
     img: assets.card_gallery5,
     title: "Palawan, Philippines",
     amount: "$650 - $950",
-    description: "A comprehensive 10-day travel guide designed to the gems and attractions of Palawan.",
+    description:
+      "A comprehensive 10-day travel guide designed to the gems and attractions of Palawan.",
     className: "col-start-2",
   },
   {
     img: assets.card_gallery4,
     title: "Santorini, Greece",
     amount: "$650 - $950",
-    description: "A comprehensive 10-day travel guide designed to the gems and attractions of Santorini.",
+    description:
+      "A comprehensive 10-day travel guide designed to the gems and attractions of Santorini.",
     className: "col-start-3",
-  }
-]
+  },
+];
+const card_gallery2 = [
+  {
+    img: assets.card_gallery1,
+    title: "Maldives, South Asia",
+    amount: "$650 - $950",
+    description:
+      "A comprehensive 10-day travel guide designed to the gems and attractions of the Maldives.",
+    className: "col-start-2",
+  },
+  {
+    img: assets.bamurru,
+    title: "Pai, Thailand",
+    amount: "$650 - $950",
+    description:
+      "A comprehensive 10-day travel guide designed to the gems and attractions of Pai.",
+    className: "col-start-3",
+  },
+  {
+    img: assets.oda,
+    title: "Palawan, Philippines",
+    amount: "$650 - $950",
+    description:
+      "A comprehensive 10-day travel guide designed to the gems and attractions of Palawan.",
+    className: "col-start-2",
+  },
+  {
+    img: assets.jimbaran,
+    title: "Santorini, Greece",
+    amount: "$650 - $950",
+    description:
+      "A comprehensive 10-day travel guide designed to the gems and attractions of Santorini.",
+    className: "col-start-3",
+  },
+];
 
 const LandingPage = () => {
   return (
@@ -123,29 +160,66 @@ const LandingPage = () => {
               </div>
             </div>
 
-            {
-              card_gallery.map((card, index) => (
-                <div className={`rounded-xl col-start-2 ${card.className}`} key={index}>
-              <div className="w-[435px] h-[290px]">
-                <img
-                  src={card.img}
-                  className="h-full w-full object-cover rounded-xl filter brightness-[0.85]"
-                />
-              </div>
-              <div className="w-full flex flex-col gap-3 pt-6">
-                <h1 className="text-xl font-medium">{card.title}</h1>
-                <p className="text-xs">{card.description}</p>
-                <div className="flex justify-between items-center mt-2">
-                  <p className="font-bold">{card.amount}</p>
-                  <button className="cursor-pointer px-4 py-2 border rounded-full font-semibold text-xs">Book Now</button>
+            {card_gallery.map((card, index) => (
+              <div
+                className={`rounded-xl col-start-2 ${card.className}`}
+                key={index}
+              >
+                <div className="w-[435px] h-[290px]">
+                  <img
+                    src={card.img}
+                    className="h-full w-full object-cover rounded-xl filter brightness-[0.85]"
+                  />
+                </div>
+                <div className="w-full flex flex-col gap-3 pt-6">
+                  <h1 className="text-xl font-medium">{card.title}</h1>
+                  <p className="text-xs">{card.description}</p>
+                  <div className="flex justify-between items-center mt-2">
+                    <p className="font-bold">{card.amount}</p>
+                    <button className="cursor-pointer px-4 py-2 border rounded-full font-semibold text-xs">
+                      Book Now
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-              ))
-            }
-            {/* <div className="border rounded-3xl col-start-3">3</div>
-            <div className="border rounded-3xl col-start-2">4</div>
-            <div className="border rounded-3xl col-start-3">4</div> */}
+            ))}
+          </div>
+        </div>
+
+        {/* Section 3 */}
+        <div className="mx-auto mt-20 max-w-[1440px] px-14">
+          <h1 className="font-heading text-[32px] font-extrabold mx-auto w">
+            Most Popular Lodges around the world{" "}
+          </h1>
+          <div className="flex items-center justify-between">
+            <p className="text-black/50 font-medium">
+              Explore our travel packages with this month with options for every
+              traveler
+            </p>
+            <button className="flex items-center gap-2 cursor-pointer px-6 py-2 border rounded-full font-semibold text-xs">
+              See all <img src={assets.forward_arrow} />
+            </button>
+          </div>
+
+          <div className="flex items-center justify-between gap-8 mt-8">
+            {card_gallery2.map((card, index) => (
+              <div>
+                <img
+                  src={card.img}
+                  className="h-[19rem] w-[19rem] object-cover object-center rounded-[14px] filter brightness-[0.85]"
+                />
+                <div className="w-full flex flex-col gap-3 pt-6">
+                  <h1 className="text-xl font-medium">{card.title}</h1>
+                  <p className="text-xs">{card.description}</p>
+                  <div className="flex justify-between items-center mt-2">
+                    <p className="font-bold">{card.amount}</p>
+                    <button className="flex items-center gap-2 cursor-pointer px-6 py-2 border rounded-full font-semibold text-xs">
+                      Book Now<img src={assets.forward_arrow} />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
