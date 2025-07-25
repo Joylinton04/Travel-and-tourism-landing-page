@@ -214,12 +214,24 @@ const LandingPage = () => {
                   <div className="flex justify-between items-center mt-2">
                     <p className="font-bold">{card.amount}</p>
                     <button className="flex items-center gap-2 cursor-pointer px-6 py-2 border rounded-full font-semibold text-xs">
-                      Book Now<img src={assets.forward_arrow} />
+                      Book Now
+                      <img src={assets.forward_arrow} />
                     </button>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        {/* section 4 */}
+        <div className="mt-20 bg-[#F2F2F2]/80 rounded-2xl py-12">
+          <div className="max-w-[1440px] mx-auto">
+            <h1 className="font-medium text-[40px] font-heading text-center">
+              Frequently Asked Questions
+            </h1>
+              <p className="font-medium text-center w-[697px] mx-auto mt-2">FAQs address common inquiries and provide essential information, helping users find solutions quickly.</p>
+
+              {/* Accordian div */}
           </div>
         </div>
       </div>
