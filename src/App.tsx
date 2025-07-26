@@ -3,7 +3,7 @@ import LandingPage from "./LandingPage";
 
 const App = () => {
   return (
-    <div className="h-[400vh] w-full">
+    <div className="min-h-screen w-full">
       <LandingPage />
     </div>
   );
