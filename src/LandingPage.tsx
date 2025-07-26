@@ -3,6 +3,7 @@ import { assets } from "./assets/assets";
 import Navbar from "./components/Navbar";
 import Hero_section from "./components/Hero_section";
 import Sponsors from "./components/Sponsors";
+import Accordian from "./components/Accordian";
 
 type Props = {
   children: React.ReactNode;
@@ -225,13 +226,151 @@ const LandingPage = () => {
         </div>
         {/* section 4 */}
         <div className="mt-20 bg-[#F2F2F2]/80 rounded-2xl py-12">
-          <div className="max-w-[1440px] mx-auto">
+          <div className="max-w-[1440px] mx-auto px-14">
             <h1 className="font-medium text-[40px] font-heading text-center">
               Frequently Asked Questions
             </h1>
-              <p className="font-medium text-center w-[697px] mx-auto mt-2">FAQs address common inquiries and provide essential information, helping users find solutions quickly.</p>
+            <p className="font-medium text-center w-[697px] mx-auto mt-2">
+              FAQs address common inquiries and provide essential information,
+              helping users find solutions quickly.
+            </p>
 
-              {/* Accordian div */}
+            {/* Accordian div */}
+            <div className="py-10 flex flex-col gap-6">
+              <Accordian
+                question="Do I need a visa to travel to my destination?"
+                answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe cum
+          suscipit voluptatum repellat debitis, harum consectetur exercitationem
+          excepturi explicabo voluptatibus laboriosam ullam eum quod dolorem
+          officia iusto! Similique, facilis ratione. Voluptatem, adipisci magni
+          expedita possimus, ducimus aspernatur sequi eos inventore dolore
+          placeat illum dolorum, reprehenderit quae sed. Sapiente amet
+          reprehenderit neque ducimus atque dolorum quasi, quis dolores rem quam
+          quos."
+              />
+              <Accordian
+                question="How do I get started with your services?"
+                answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe cum
+          suscipit voluptatum repellat debitis, harum consectetur exercitationem
+          excepturi explicabo voluptatibus laboriosam ullam eum quod dolorem
+          officia iusto! Similique, facilis ratione. Voluptatem, adipisci magni
+          expedita possimus, ducimus aspernatur sequi eos inventore dolore
+          placeat illum dolorum, reprehenderit quae sed. Sapiente amet
+          reprehenderit neque ducimus atque dolorum quasi, quis dolores rem quam
+          quos."
+              />
+              <Accordian
+                question="Can you help with travel insurance?"
+                answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe cum
+          suscipit voluptatum repellat debitis, harum consectetur exercitationem
+          excepturi explicabo voluptatibus laboriosam ullam eum quod dolorem
+          officia iusto! Similique, facilis ratione. Voluptatem, adipisci magni
+          expedita possimus, ducimus aspernatur sequi eos inventore dolore
+          placeat illum dolorum, reprehenderit quae sed. Sapiente amet
+          reprehenderit neque ducimus atque dolorum quasi, quis dolores rem quam
+          quos."
+              />
+              <Accordian
+                question="Do you only work with clients in a specific country?"
+                answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe cum
+          suscipit voluptatum repellat debitis, harum consectetur exercitationem
+          excepturi explicabo voluptatibus laboriosam ullam eum quod dolorem
+          officia iusto! Similique, facilis ratione. Voluptatem, adipisci magni
+          expedita possimus, ducimus aspernatur sequi eos inventore dolore
+          placeat illum dolorum, reprehenderit quae sed. Sapiente amet
+          reprehenderit neque ducimus atque dolorum quasi, quis dolores rem quam
+          quos."
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* section 5 */}
+        <div className="px-14 max-w-[1440px] mx-auto mt-20 rounded-2xl">
+          <div
+            className="rounded-2xl relative"
+            style={{
+              backgroundImage: `url(${assets.beachAndPalm})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              height: "809px",
+              width: "100%",
+            }}
+          >
+            <div
+              className="absolute inset-0 rounded-2xl"
+              style={{
+                backgroundColor:
+                  "rgba(0, 0, 0, 0.2)" /* Adjust the alpha value for desired darkness */,
+              }}
+            ></div>
+
+            <div className="flex flex-col items-center justify-center h-full text-white relative z-20">
+              <h1 className="font-heading text-[64px] font-semibold text-center w-[908px] mx-auto">
+                Start Your Adventure into Nature’s Wild Beauty Today
+              </h1>
+              <p className="text-center mt-4 w-[600px]">
+                Explore our curated travel packages for every kind of traveler -
+                whether you’re dreaming of a beach escape, a mountain adventure,
+                or a vibrant city journey, there’s something special waiting for
+                you.
+              </p>
+              <button className="mt-6 px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors cursor-pointer">
+                Get Started Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer section */}
+        <div className="flex justify-between max-w-[1440px] mx-auto px-14 py-10 mt-20">
+          <div className="flex gap-12">
+            <div className="flex flex-col gap-4 text-sm">
+              <h3 className="font-bold text-xl">Support</h3>
+              <p>Support center</p>
+              <p>FAQs</p>
+              <p>Troubleshooting</p>
+              <p>Feedback</p>
+            </div>
+            <div className="flex flex-col gap-4 text-sm">
+              <h3 className="font-bold text-xl">Company</h3>
+              <p>About Us</p>
+              <p>Centers</p>
+              <p>Blog</p>
+              <p>Contacts</p>
+            </div>
+            <div className="flex flex-col gap-4 text-sm">
+              <h3 className="font-bold text-xl">Legal</h3>
+              <p>Legal Policy</p>
+              <p>Terms and conditions</p>
+              <p>Cookie Policy</p>
+              <p>Compliance</p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-6 items-end">
+            <div className="flex h-[61px] w-[483px] border rounded-r-[9999px]">
+              <input
+                type="text"
+                className="w-[80%] outline-none px-4"
+                placeholder="Type your email address"
+              />
+              <button className="px-8 bg-black text-white rounded-full">
+                Subscribe
+              </button>
+            </div>
+            <div className="flex items-center gap-6">
+              <img src={assets.ig} />
+              <img src={assets.In} />
+              <img src={assets.fb} />
+              <img src={assets.twitter} />
+            </div>
+          </div>
+        </div>
+        <div className="max-w-[1440px] mx-auto px-14">
+          <hr />
+          <div className="flex items-center gap-8 text-black/80 py-4 justify-end">
+            <p>Privacy Policy</p>
+            <p>Terms of use</p>
           </div>
         </div>
       </div>
