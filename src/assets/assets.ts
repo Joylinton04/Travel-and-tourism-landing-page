@@ -15,6 +15,11 @@ import forward_arrow from './arrow-forward-simple.svg'
 import bamurru from './Bamurru Plains Airboat Sunset.jpg'
 import oda from './Resorts Photo.jpg'
 import jimbaran from './Four Seasons Bali Jimbaran.webp'
+import beachAndPalm from './Beach and Palm Trees.jpg'
+import ig from './ig.svg'
+import fb from './fb.svg'
+import In from './in.svg'
+import twitter from './twitter.svg'
 
 
 
@@ -37,4 +42,9 @@ export const assets = {
     oda,
     bamurru,
     jimbaran,
+    beachAndPalm,
+    ig,
+    In,
+    fb,
+    twitter
 }
