@@ -15,7 +15,7 @@ const Accordian = ({question, answer}: prop) => {
       className={`flex flex-col gap-4 shadow-lg p-4 rounded-2xl cursor-pointer ${isOpen && 'bg-black'}`}
     >
       <div className="flex justify-between items-center">
-        <h1 className={`font-semibold text-xl ${isOpen ? "text-white" : "text-gray-700"}`}>
+        <h1 className={`font-semibold text-xl ${isOpen ? "text-white" : "text-gray-700"} mdd:text-base`}>
           {question}
         </h1>
         <img
