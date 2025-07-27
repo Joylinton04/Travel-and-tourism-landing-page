@@ -11,7 +11,7 @@ const Navbar = () => {
         </h1>
       </div>
 
-      <ul className="flex items-center gap-6 text-[16px] font-medium text-white/90 relative">
+      <ul className="flex items-center gap-6 text-[16px] font-medium text-white/90 relative mdd:hidden">
         {["Hotel", "Travel", "Destination", "Packages"].map((item, index) => (
           <li
             key={index}
@@ -24,7 +24,7 @@ const Navbar = () => {
       </ul>
 
       <div className="flex items-center gap-4">
-        <button className="text-base font-bold text-white px-4 py-2 rounded-full hover:text-black hover:bg-gray-200 transition-colors">
+        <button className="text-base font-bold text-white px-4 py-2 rounded-full hover:text-black hover:bg-gray-200 transition-colors mdd:hidden">
           Log in
         </button>
         <button className="text-base font-medium bg-white text-black px-4 py-2 rounded-full  hover:bg-gray-200 transition-colors">
