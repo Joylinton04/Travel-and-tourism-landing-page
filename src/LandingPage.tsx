@@ -95,10 +95,10 @@ const LandingPage = () => {
         <Navbar />
 
         <div className="pt-28 max-w-[1440px] mx-auto mdd:pt-12">
-          <h1 className="font-heading font-bold text-[64px] text-center text-white/90 leading-tight mdd:text-4xl">
+          <h1 className="font-heading font-bold text-[64px] text-center text-white/90 leading-tight mdd:text-4xl ssm:px-4">
             Discover Your Next Amazing Journey Full of Excitement and Wonder
           </h1>
-          <p className="text-white/80 font-medium text-center ssm:text-sm">
+          <p className="text-white/80 font-medium text-center ssm:text-sm ssm:px-4">
             Embark on Your Next Incredible Adventure - Where Every Moment Spark
             Wonder, Discovery and Unforgettable Memories.
           </p>
@@ -107,10 +107,10 @@ const LandingPage = () => {
         {/* Hero section */}
         <Hero_section />
       </div>
-      <h1 className="font-semibold text-2xl p-6 text-center">
+      <h1 className="font-bold text-2xl p-6 text-center">
         Trusted by 500+ Companies
       </h1>
-      <div className="px-14 flex justify-between items-center max-w-[1440px] mx-auto flex-wrap mdd:justify-center mdd:gap-6">
+      <div className="px-14 flex justify-between items-center max-w-[1440px] mx-auto flex-wrap mdd:justify-center mdd:gap-6 ssm:flex-nowrap ssm:overflow-auto sss:px-6">
         <Sponsors img={assets.segment} text="Segment" />
         <Sponsors img={assets.goodwell} text="Goodwell" />
         <Sponsors img={assets.goodwell} text="Goodwell" />
@@ -119,37 +119,37 @@ const LandingPage = () => {
         <Sponsors img={assets.segment} text="Shutterframe" />
       </div>
       <div className="mt-20">
-        <h1 className="w-[523px] font-heading mx-auto text-4xl font-extrabold text-center">
+        <h1 className="w-[523px] font-heading mx-auto text-4xl font-extrabold text-center ssm:text-3xl ssm:w-full">
           Top Travel Deals of the Month Handpicked for you
         </h1>
-        <h1 className="w-[523px] mx-auto mt-6 font-medium text-center">
+        <h1 className="w-[523px] mx-auto mt-6 font-medium text-center ssm:text-xs ssm:w-full ssm:px-4">
           Explore curated travel packages for every kind of traveler - whether
           you’re dreaming of a beach escape, a mountain adventure, or a vibrant
           city journey, there’s something special waiting for you
         </h1>
 
-        <div className="px-14 max-w-[1440px] mx-auto mt-10 grid h-[968px] mdd:h-full">
+        <div className="px-14 max-w-[1440px] mx-auto mt-10 grid h-[968px] mdd:h-full ssm:px-7">
            <div className="grid grid-cols-3 mdd:grid-cols-2 ssm:grid-cols-1 auto-rows-auto gap-6 relative">
-            <div className="rounded-3xl row-span-2 relative mdd:col-span-2 mdd:h-[500px]">
+            <div className="rounded-3xl row-span-2 relative mdd:col-span-2 mdd:h-[500px] ssm:h-full">
               <img
                 src={assets.card_gallery1}
                 className="relative z-0 h-full w-full bg-black rounded-3xl object-cover object-center filter brightness-[0.8]"
               />
 
               <div className="absolute bottom-10 ssm:bottom-4 text-white z-30 flex flex-col gap-8 ssm:gap-4 w-full">
-                <h1 className="text-[40px] font-heading font-medium text-start px-4 -mt-20">
+                <h1 className="text-[40px] font-heading font-medium text-start px-4 -mt-20 ssm:text-4xl">
                   Enjoy the Mesmerising Beauty of Nature
                 </h1>
 
-                <div className="w-[25rem] ssm:w-full bg-white rounded-full h-[57px] mx-auto px-2">
-                  <div className="rounded-full h-full w-full p-2 flex gap-2 items-center justify-between overflow-x-auto">
+                <div className="w-[25rem] ssm:w-full bg-white rounded-full h-[57px] mx-auto px-2 ssm:h-full">
+                  <div className="rounded-full h-full w-full p-2 flex gap-2 items-center justify-between overflow-x-auto ssm:p-1">
                     {[
                       assets.card_gallery1,
                       assets.card_gallery1,
                       assets.card_gallery1,
                       assets.card_gallery1,
                     ].map((img, index) => (
-                      <div key={index} className="w-20 h-11 flex-shrink-0">
+                      <div key={index} className="w-20 h-11 flex-shrink-0 ssm:w-16 ssm:h-7">
                         <img
                           src={img}
                           className="h-full w-full object-center rounded-full"
@@ -163,7 +163,7 @@ const LandingPage = () => {
 
             {card_gallery.map((card, index) => (
               <div
-                className={`rounded-xl col-start-2 mdd:col-span-1 ssm:col-span-1 ${card.className}`}
+                className={`rounded-xl col-start-2 mdd:col-span-1 ssm:col-span-2 ${card.className}`}
                 key={index}
               >
                 <div className="w-[435px] h-[290px] mdd:w-full">
@@ -177,7 +177,7 @@ const LandingPage = () => {
                   <p className="text-xs">{card.description}</p>
                   <div className="flex justify-between items-center mt-2">
                     <p className="font-bold">{card.amount}</p>
-                    <button className="cursor-pointer px-4 py-2 border rounded-full font-semibold text-xs">
+                    <button className="cursor-pointer px-4 py-2 border rounded-full font-semibold text-xs ssm:px-4">
                       Book Now
                     </button>
                   </div>
@@ -188,16 +188,16 @@ const LandingPage = () => {
         </div>
 
         {/* Section 3 */}
-        <div className="mx-auto mt-20 max-w-[1440px] px-14">
-          <h1 className="font-heading text-[32px] font-extrabold mx-auto">
+        <div className="mx-auto mt-20 max-w-[1440px] px-14 ssm:px-7">
+          <h1 className="font-heading text-[32px] font-extrabold mx-auto ssm:text-3xl">
             Most Popular Lodges around the world{" "}
           </h1>
           <div className="flex items-center justify-between mdd:pt-4">
-            <p className="text-black/50 font-medium mdd:w-1/2">
+            <p className="text-black/50 font-medium mdd:w-1/2 ssm:text-sm">
               Explore our travel packages with this month with options for every
               traveler
             </p>
-            <button className="flex items-center gap-2 cursor-pointer px-6 py-2 border rounded-full font-semibold text-xs">
+            <button className="flex items-center gap-2 cursor-pointer px-6 py-2 border rounded-full font-semibold text-xs ssm:px-4">
               See all <img src={assets.forward_arrow} />
             </button>
           </div>
@@ -214,7 +214,7 @@ const LandingPage = () => {
                   <p className="text-xs">{card.description}</p>
                   <div className="flex justify-between items-center mt-2">
                     <p className="font-bold">{card.amount}</p>
-                    <button className="flex items-center gap-2 cursor-pointer px-6 py-2 border rounded-full font-semibold text-xs">
+                    <button className="flex items-center gap-2 cursor-pointer px-6 py-2 border rounded-full font-semibold text-xs ssm:px-4">
                       Book Now
                       <img src={assets.forward_arrow} />
                     </button>
@@ -226,7 +226,7 @@ const LandingPage = () => {
         </div>
         {/* section 4 */}
         <div className="mt-20 bg-[#F2F2F2]/80 rounded-2xl py-12">
-          <div className="max-w-[1440px] mx-auto px-14">
+          <div className="max-w-[1440px] mx-auto px-14 ssm:px-7">
             <h1 className="font-medium text-[40px] font-heading text-center">
               Frequently Asked Questions
             </h1>
@@ -286,7 +286,7 @@ const LandingPage = () => {
         </div>
 
         {/* section 5 */}
-        <div className="px-14 max-w-[1440px] mx-auto mt-20 rounded-2xl">
+        <div className="px-14 max-w-[1440px] mx-auto mt-20 rounded-2xl ssm:px-7">
           <div
             className="rounded-2xl relative h-[809px] mdd:h-[500px]"
             style={{
@@ -300,11 +300,11 @@ const LandingPage = () => {
               className="absolute inset-0 rounded-2xl"
               style={{
                 backgroundColor:
-                  "rgba(0, 0, 0, 0.3)" /* Adjust the alpha value for desired darkness */,
+                  "rgba(0, 0, 0, 0.4)"
               }}
             ></div>
 
-            <div className="flex flex-col items-center justify-center h-full text-white relative z-20">
+            <div className="flex flex-col items-center justify-center h-full text-white relative z-20 ssm:px-2">
               <h1 className="font-heading text-[64px] font-semibold text-center w-[908px] mx-auto mdd:text-4xl mdd:w-full">
                 Start Your Adventure into Nature’s Wild Beauty Today
               </h1>
@@ -314,7 +314,7 @@ const LandingPage = () => {
                 or a vibrant city journey, there’s something special waiting for
                 you.
               </p>
-              <button className="mt-6 px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors cursor-pointer">
+              <button className="mt-6 px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors cursor-pointer ssm:text-sm ssm:px-6">
                 Get Started Now
               </button>
             </div>

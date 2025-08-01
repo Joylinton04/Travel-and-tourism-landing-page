@@ -4,7 +4,7 @@ import { assets } from "../assets/assets";
 const Hero_section = () => {
   return (
     <div className="px-6 ssm:px-4 py-10 max-w-[1440px] mx-auto">
-      <div className="h-auto bg-white w-full rounded-2xl p-4 space-y-6">
+      <div className="h-auto bg-[#f0f8ff] w-full rounded-2xl p-4 space-y-6">
         {/* Nav Links */}
         <ul className="flex flex-wrap items-center gap-4 text-[#000000]/50 text-sm cursor-pointer relative">
           <li className="px-4 py-2 bg-black text-white rounded-full">Travel</li>
