@@ -367,7 +367,7 @@ const LandingPage = () => {
   </div>
 
         
-        <div className="max-w-[1440px] mx-auto px-14">
+        <div className="max-w-[1440px] mx-auto px-14 ssm:px-7">
           <hr />
           <div className="text-xs flex items-center gap-8 text-black/80 py-4 justify-end">
             <p>Privacy Policy</p>
